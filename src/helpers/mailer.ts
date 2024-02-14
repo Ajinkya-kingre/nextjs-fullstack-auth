@@ -44,7 +44,7 @@ export const sendEmail = async ({ email, emailType, userId }: any) => {
       }/verifyemail?token=${hashedToken}
       </p>`,
     };
-    const mailresponse = await transport.sendEmail(mailOptions);
+    const mailresponse = await transport.sendMail(mailOptions);
     return mailresponse;
   } catch (error: any) {
     throw new Error(error.message);
